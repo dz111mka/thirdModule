@@ -3,4 +3,44 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
+    <!-- Mapping Register -->
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <jsp-file>/view/register.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/register/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- Mapping Login -->
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <jsp-file>/view/login.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/login/*</url-pattern>
+    </servlet-mapping>
+
+    <!--<servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.example.thirdmodulfinalproject.controllers.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>-->
+
+    <!-- Start quest -->
+    <servlet>
+        <servlet-name>Start</servlet-name>
+        <jsp-file>/view/start.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Start</servlet-name>
+        <url-pattern>/start</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>

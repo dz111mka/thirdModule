@@ -2,17 +2,19 @@
 <html>
 <head>
     <title>Register</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
 <div class="wrapper">
     <header>
         <h1>Квест "Поиск сокровищ"</h1>
         <p>Присоединяйтесь к нам в увлекательном приключении по поиску сокровищ!</p>
 
-        <link rel="stylesheet" href="../../style.css">
+
     </header>
     <main>
-        <form action="${pageContext.request.contextPath}/" method="post">
+        <form action="register" method="post">
             <div class="container">
                 <label for="name">Имя:</label>
                 <input type="text" id="name" name="name" required>
@@ -22,8 +24,8 @@
                 <input type="text" id="surname" name="surname" required>
             </div>
             <div class="container">
-                <label for="login">Логин:</label>
-                <input type="text" id="login" name="login" required>
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
             </div>
             <div class="container">
                 <label for="password">Пароль:</label>
@@ -38,7 +40,7 @@
         </form>
     </main>
     <footer>
-        <p>&copy; 2021 Квест "Поиск сокровищ". Все права защищены.</p>
+        <p>&copy; 2023 Квест "Поиск сокровищ". Все права защищены.</p>
     </footer>
 </div>
 </body>

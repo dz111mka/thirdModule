@@ -1,4 +1,32 @@
+body {
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+main {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+.wrapper {
+    align-items: center;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 header {
+    width: 100%;
     background-color: #F5F5F5;
     padding: 20px;
     text-align: center;
@@ -15,6 +43,14 @@ p {
     color: #666;
     margin-bottom: 20px;
 }
+
+.statistic {
+    border: 1px solid black;
+    border-radius: 5px;
+
+}.statistic p{
+     margin: 5px;
+ }
 
 .register-btn {
     display: inline-block;
