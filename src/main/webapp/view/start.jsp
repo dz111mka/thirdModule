@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ page import="com.example.thirdmodulfinalproject.entity.User" %>
+<%@ page import="com.example.thirdmodulfinalproject.entity.Question" %>
+<%@ page import="com.example.thirdmodulfinalproject.repositories.QuestionsRepo" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
@@ -11,6 +13,9 @@
 </head>
 
 <body>
+
+
+
 <div class="wrapper">
     <header>
         <h1>Квест "Поиск сокровищ"</h1>
@@ -22,15 +27,24 @@
         </div>
 
         <div class="game">
-            <p><b>Вы отправляетесь на поиски сокровищ, которые, по легенде, были спрятаны на острове древними пиратами. Вам
-                предстоит пройти через несколько испытаний и выбрать правильный путь, чтобы найти сокровища.</b></p>
-            <form action="game-round1.jsp" method="post">
-                <p><b>Вы прибываете на остров и видите две дороги: одна ведет к горам, а другая - к пляжу. Куда вы пойдете?</b></p>
+            <form action="questions" method="get">
+                <p><b><%
+                    out.println(QuestionsRepo.mainQuestion.getQuestion());
+                %></b></p>
+                <p><b></b></p>
+
                 <input id="a1" type="radio" name="answer" value="answer1">
-                <label for="a1">К горам</label>
+                <label for="a1">
+                    <%
+                        out.println(QuestionsRepo.mainQuestion.getAnswerLeft());
+                    %>
+                </label>
                 <input id="a2" type="radio" name="answer" value="answer2">
-                <label for="a2">К пляжу</label>
-                <input class="register-btn" type="submit" value="Принять решение">
+                <label for="a2"><%
+                    out.println(QuestionsRepo.mainQuestion.getAnswerRight());
+                %></label>
+                <input class="register-btn" type="submit" value="Начать">
+
             </form>
         </div>
 

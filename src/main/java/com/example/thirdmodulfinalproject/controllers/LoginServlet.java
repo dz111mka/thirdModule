@@ -1,27 +1,32 @@
 package com.example.thirdmodulfinalproject.controllers;
 
+import com.example.thirdmodulfinalproject.entity.Question;
 import com.example.thirdmodulfinalproject.entity.User;
+import com.example.thirdmodulfinalproject.repositories.QuestionsRepo;
 import com.example.thirdmodulfinalproject.repositories.UserRepo;
+import com.example.thirdmodulfinalproject.util.CurrentQuestion;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.*;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
+
     List<User> userList = UserRepo.storage;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("doGet method of LoginServlet is called.");
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/view/login.jsp");
+        CurrentQuestion.value = QuestionsRepo.mainQuestion;
         rd.forward(request, response);
+
     }
 
     @Override

@@ -23,6 +23,17 @@
         <url-pattern>/login/*</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Congratz</servlet-name>
+        <jsp-file>/view/congratz.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Congratz</servlet-name>
+        <url-pattern>/congratz/*</url-pattern>
+    </servlet-mapping>
+
+
+
     <!--<servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.example.thirdmodulfinalproject.controllers.LoginServlet</servlet-class>
@@ -35,6 +46,7 @@
     <!-- Start quest -->
     <servlet>
         <servlet-name>Start</servlet-name>
+        <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
         <jsp-file>/view/start.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
