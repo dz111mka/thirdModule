@@ -1,14 +1,14 @@
 package com.example.thirdmodulfinalproject.controllers;
+
 import com.example.thirdmodulfinalproject.entity.User;
-import com.example.thirdmodulfinalproject.repositories.QuestionsRepo;
 import com.example.thirdmodulfinalproject.repositories.UserRepo;
-import com.example.thirdmodulfinalproject.util.CurrentQuestion;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {

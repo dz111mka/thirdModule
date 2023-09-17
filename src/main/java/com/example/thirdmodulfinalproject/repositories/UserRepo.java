@@ -1,7 +1,6 @@
 package com.example.thirdmodulfinalproject.repositories;
 
 import com.example.thirdmodulfinalproject.entity.User;
-
 import java.util.ArrayList;
 import java.util.List;
 

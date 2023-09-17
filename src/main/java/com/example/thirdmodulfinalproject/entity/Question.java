@@ -1,7 +1,5 @@
 package com.example.thirdmodulfinalproject.entity;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-
 public class Question {
     private int id;
     String question;

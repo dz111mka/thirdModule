@@ -1,0 +1,5 @@
+com\example\thirdmodulfinalproject\controllers\RegisterServlet.class
+com\example\thirdmodulfinalproject\entity\User.class
+com\example\thirdmodulfinalproject\repositories\UserRepo$1.class
+com\example\thirdmodulfinalproject\repositories\UserRepo.class
+com\example\thirdmodulfinalproject\controllers\LoginServlet.class
